@@ -148,7 +148,6 @@ public class Game {
                     Piece piece = (board.getGameBoard())[position[0]][position[1]]; //Get piece that will be moved
 
                     //Move piece to different spot
-                    seeMoves(piece);
                     System.out.print("Move to (Ex: C3): ");
                     input = kb.nextLine();
                     int[] moveTo = new int[]{Integer.parseInt(input.substring(1)) - 1,
@@ -270,12 +269,6 @@ public class Game {
                 }
             }
             return minScore;
-        }
-    }
-
-    public static void seeMoves(Piece piece) {
-        for(int[] x : piece.getMoves()) {
-            System.out.println(Arrays.toString(x));
         }
     }
 
